@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nuvola-api"
+version = "1.0.0"
+description = "Client Python indipendente e documentazione tecnica completa per le API REST di Nuvola (Madisoft S.p.A.)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Nuvola API Contributors" }
+]
+keywords = [
+    "nuvola",
+    "madisoft",
+    "registro-elettronico",
+    "api-client",
+    "scuola",
+    "reverse-engineering"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.1.0"
+]
+
+[project.scripts]
+nuvola-cli = "nuvola_api.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Gianlu1107/nuvolaMadisoftAPI"
+Documentation = "https://github.com/Gianlu1107/nuvolaMadisoftAPI#readme"
+"Bug Tracker" = "https://github.com/Gianlu1107/nuvolaMadisoftAPI/issues"
+
+[tool.setuptools.package-data]
+nuvola_api = ["py.typed"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"]

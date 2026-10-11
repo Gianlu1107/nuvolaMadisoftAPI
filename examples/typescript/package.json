@@ -1,0 +1,17 @@
+{
+  "name": "nuvola-api-ts-example",
+  "version": "1.0.0",
+  "description": "Esempio client TypeScript / Node.js per le API di Nuvola",
+  "main": "client.ts",
+  "scripts": {
+    "start": "ts-node client.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
